@@ -49,6 +49,13 @@
 .volunteer-header h2 {
     font-size: 2.5rem;
     color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.volunteer-subtitle {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
@@ -73,6 +80,32 @@
 .highlight-text {
     color: var(--secondary);
     font-weight: 500;
+}
+
+/* New List Styles */
+.volunteer-list {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    margin: 1rem auto 2rem;
+    padding: 0;
+}
+
+.volunteer-list li {
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.volunteer-list li::before {
+    content: '👉';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 .btn-primary {
