@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="volunteer.css">
 </head>
 
 <body>
@@ -61,199 +62,213 @@
             <nav class="header-nav">
                 <a href="#sessions" class="nav-link">Sessions</a>
                 <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#volunteer" class="nav-link">Volunteer</a>
             </nav>
         </div>
     </header>
-    <div class="container">
-        <section id="sessions">
-            <div class="page-title">
-                <h2>FHIR Fundamentals</h2>
+    <section id="sessions" class="section-bg-session">
+        <div class="container">
+            <div class="sessions-layout">
+                <div class="page-title">
+                    <h2>FHIR Fundamentals</h2>
+                    <p class="section-subtitle">
+                        Dive into a comprehensive learning journey designed to master US Healthcare workflows and FHIR
+                        standards.
+                        From payer market dynamics to advanced API implementations, our expert-led sessions provide the
+                        technical
+                        foundation for modern healthcare interoperability.
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Session 1 -->
+                    <article class="card">
+                        <div class="card-wrapper">
+                            <div class="card-info">
+                                <div class="card-header">
+                                    <div class="session-icon">💼</div>
+                                    <div class="session-header-content">
+                                        <span class="session-number">Session 01</span>
+                                        <h2 class="card-title">US Healthcare Payer Market & Workflows</h2>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <ul class="topic-list">
+                                        <li>Nomenclature & Workflows</li>
+                                        <li>Financing & Payment Models</li>
+                                        <li>Health Plans</li>
+                                        <li>Challenges</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-dates">
+                                <div class="date-item">
+                                    <span class="date-label">Session Date</span>
+                                    <span class="date-value">20-Jan-2026</span>
+                                </div>
+                                <div class="date-item">
+
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Session 2 -->
+                    <article class="card">
+                        <div class="card-wrapper">
+                            <div class="card-info">
+                                <div class="card-header">
+                                    <div class="session-icon">📊</div>
+                                    <div class="session-header-content">
+                                        <span class="session-number">Session 02</span>
+                                        <h2 class="card-title">FHIR Foundations, Data Modeling & Core Administrative
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <ul class="topic-list">
+                                        <li>FHIR Architecture & Resource-based Design</li>
+                                        <li>Primitive & Complex Data Types</li>
+                                        <li>Identifiers & Business Identity</li>
+                                        <li>CodeableConcept, CodeSystem, ValueSet</li>
+                                        <li>References, Cardinality, Flags</li>
+                                        <li>Extensions</li>
+                                        <li>Patient (Deep Dive)</li>
+                                        <li>Practitioner & PractitionerRole</li>
+                                        <li>Organization & RelatedPerson</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-dates">
+                                <div class="date-item">
+                                    <span class="date-label">Session Date</span>
+                                    <span class="date-value">03-Feb-2026</span>
+                                </div>
+                                <div class="date-item">
+                                    <span class="date-label">Assessment</span>
+                                    <span class="date-value assessment">10-Feb-2026</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Session 3 -->
+                    <article class="card">
+                        <div class="card-wrapper">
+                            <div class="card-info">
+                                <div class="card-header">
+                                    <div class="session-icon">💊</div>
+                                    <div class="session-header-content">
+                                        <span class="session-number">Session 03</span>
+                                        <h2 class="card-title">Clinical Resources, Workflow, Scheduling & Medication
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <ul class="topic-list">
+                                        <li>Encounter & Visit Modeling</li>
+                                        <li>Appointment Scheduling</li>
+                                        <li>ServiceRequest & Orders</li>
+                                        <li>Medication Overview & Request Workflow</li>
+                                        <li>Immunization</li>
+                                        <li>Status & Lifecycle Patterns</li>
+                                        <li>Observation & Condition</li>
+                                        <li>AllergyIntolerance</li>
+                                        <li>Procedure & DiagnosticReport</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-dates">
+                                <div class="date-item">
+                                    <span class="date-label">Session Date</span>
+                                    <span class="date-value">17-Feb-2026</span>
+                                </div>
+                                <div class="date-item">
+                                    <span class="date-label">Assessment</span>
+                                    <span class="date-value assessment">24-Feb-2026</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Session 4 -->
+                    <article class="card">
+                        <div class="card-wrapper">
+                            <div class="card-info">
+                                <div class="card-header">
+                                    <div class="session-icon">🔌</div>
+                                    <div class="session-header-content">
+                                        <span class="session-number">Session 04</span>
+                                        <h2 class="card-title">FHIR REST APIs & Bundles</h2>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <ul class="topic-list">
+                                        <li>REST Interaction Model & CRUD</li>
+                                        <li>Read vs Search & Parameters</li>
+                                        <li>_include & _revinclude</li>
+                                        <li>Pagination & Sorting</li>
+                                        <li>Bundle Types: Searchset, Transaction, Batch</li>
+                                        <li>Atomic Multi-resource Transactions</li>
+                                        <li>HL7 → FHIR Conceptual Mapping</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-dates">
+                                <div class="date-item">
+                                    <span class="date-label">Session Date</span>
+                                    <span class="date-value">03-Mar-2026</span>
+                                </div>
+                                <div class="date-item">
+                                    <span class="date-label">Assessment</span>
+                                    <span class="date-value assessment">10-Mar-2026</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Session 5 -->
+                    <article class="card">
+                        <div class="card-wrapper">
+                            <div class="card-info">
+                                <div class="card-header">
+                                    <div class="session-icon">🔐</div>
+                                    <div class="session-header-content">
+                                        <span class="session-number">Session 05</span>
+                                        <h2 class="card-title">US Core, Terminology & SMART on FHIR</h2>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <ul class="topic-list">
+                                        <li>SMART Basics, Profiles & Constraints</li>
+                                        <li>US Core Overview (Patient, Observation)</li>
+                                        <li>Terminology Validation Basics</li>
+                                        <li>Common Interoperability Errors</li>
+                                        <li>OAuth2 Fundamentals & SMART App Launch</li>
+                                        <li>Read & Write FHIR Data</li>
+                                        <li>Production Best Practices</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-dates">
+                                <div class="date-item">
+                                    <span class="date-label">Session Date</span>
+                                    <span class="date-value">17-Mar-2026</span>
+                                </div>
+                                <div class="date-item">
+                                    <span class="date-label">Assessment</span>
+                                    <span class="date-value assessment">24-Mar-2026</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="timeline">
-                <!-- Session 1 -->
-                <article class="card">
-                    <div class="card-wrapper">
-                        <div class="card-info">
-                            <div class="card-header">
-                                <div class="session-icon">💼</div>
-                                <div class="session-header-content">
-                                    <span class="session-number">Session 01</span>
-                                    <h2 class="card-title">US Healthcare Payer Market & Workflows</h2>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <ul class="topic-list">
-                                    <li>Nomenclature & Workflows</li>
-                                    <li>Financing & Payment Models</li>
-                                    <li>Health Plans</li>
-                                    <li>Challenges</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-dates">
-                            <div class="date-item">
-                                <span class="date-label">Session Date</span>
-                                <span class="date-value">20-Jan-2026</span>
-                            </div>
-                            <div class="date-item">
-
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Session 2 -->
-                <article class="card">
-                    <div class="card-wrapper">
-                        <div class="card-info">
-                            <div class="card-header">
-                                <div class="session-icon">📊</div>
-                                <div class="session-header-content">
-                                    <span class="session-number">Session 02</span>
-                                    <h2 class="card-title">FHIR Foundations, Data Modeling & Core Administrative</h2>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <ul class="topic-list">
-                                    <li>FHIR Architecture & Resource-based Design</li>
-                                    <li>Primitive & Complex Data Types</li>
-                                    <li>Identifiers & Business Identity</li>
-                                    <li>CodeableConcept, CodeSystem, ValueSet</li>
-                                    <li>References, Cardinality, Flags</li>
-                                    <li>Extensions</li>
-                                    <li>Patient (Deep Dive)</li>
-                                    <li>Practitioner & PractitionerRole</li>
-                                    <li>Organization & RelatedPerson</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-dates">
-                            <div class="date-item">
-                                <span class="date-label">Session Date</span>
-                                <span class="date-value">03-Feb-2026</span>
-                            </div>
-                            <div class="date-item">
-                                <span class="date-label">Assessment</span>
-                                <span class="date-value assessment">10-Feb-2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Session 3 -->
-                <article class="card">
-                    <div class="card-wrapper">
-                        <div class="card-info">
-                            <div class="card-header">
-                                <div class="session-icon">💊</div>
-                                <div class="session-header-content">
-                                    <span class="session-number">Session 03</span>
-                                    <h2 class="card-title">Clinical Resources, Workflow, Scheduling & Medication</h2>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <ul class="topic-list">
-                                    <li>Encounter & Visit Modeling</li>
-                                    <li>Appointment Scheduling</li>
-                                    <li>ServiceRequest & Orders</li>
-                                    <li>Medication Overview & Request Workflow</li>
-                                    <li>Immunization</li>
-                                    <li>Status & Lifecycle Patterns</li>
-                                    <li>Observation & Condition</li>
-                                    <li>AllergyIntolerance</li>
-                                    <li>Procedure & DiagnosticReport</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-dates">
-                            <div class="date-item">
-                                <span class="date-label">Session Date</span>
-                                <span class="date-value">17-Feb-2026</span>
-                            </div>
-                            <div class="date-item">
-                                <span class="date-label">Assessment</span>
-                                <span class="date-value assessment">24-Feb-2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Session 4 -->
-                <article class="card">
-                    <div class="card-wrapper">
-                        <div class="card-info">
-                            <div class="card-header">
-                                <div class="session-icon">🔌</div>
-                                <div class="session-header-content">
-                                    <span class="session-number">Session 04</span>
-                                    <h2 class="card-title">FHIR REST APIs & Bundles</h2>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <ul class="topic-list">
-                                    <li>REST Interaction Model & CRUD</li>
-                                    <li>Read vs Search & Parameters</li>
-                                    <li>_include & _revinclude</li>
-                                    <li>Pagination & Sorting</li>
-                                    <li>Bundle Types: Searchset, Transaction, Batch</li>
-                                    <li>Atomic Multi-resource Transactions</li>
-                                    <li>HL7 → FHIR Conceptual Mapping</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-dates">
-                            <div class="date-item">
-                                <span class="date-label">Session Date</span>
-                                <span class="date-value">03-Mar-2026</span>
-                            </div>
-                            <div class="date-item">
-                                <span class="date-label">Assessment</span>
-                                <span class="date-value assessment">10-Mar-2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Session 5 -->
-                <article class="card">
-                    <div class="card-wrapper">
-                        <div class="card-info">
-                            <div class="card-header">
-                                <div class="session-icon">🔐</div>
-                                <div class="session-header-content">
-                                    <span class="session-number">Session 05</span>
-                                    <h2 class="card-title">US Core, Terminology & SMART on FHIR</h2>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <ul class="topic-list">
-                                    <li>SMART Basics, Profiles & Constraints</li>
-                                    <li>US Core Overview (Patient, Observation)</li>
-                                    <li>Terminology Validation Basics</li>
-                                    <li>Common Interoperability Errors</li>
-                                    <li>OAuth2 Fundamentals & SMART App Launch</li>
-                                    <li>Read & Write FHIR Data</li>
-                                    <li>Production Best Practices</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-dates">
-                            <div class="date-item">
-                                <span class="date-label">Session Date</span>
-                                <span class="date-value">17-Mar-2026</span>
-                            </div>
-                            <div class="date-item">
-                                <span class="date-label">Assessment</span>
-                                <span class="date-value assessment">24-Mar-2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="certificates" class="certificates-section">
+    <section id="certificates" class="certificates-section section-bg-certificate">
+        <div class="container">
             <div class="page-title">
                 <h2>Certifications</h2>
                 <p class="section-subtitle">Earn industry-recognized certifications to validate your expertise</p>
@@ -295,8 +310,56 @@
                         on FHIR. Learn OAuth2, app launch protocols, and integration best practices.</p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+        </div>
+    </section>
+    <section id="volunteer" class="volunteer-section">
+        <div class="container">
+            <div class="volunteer-card">
+                <div class="volunteer-content">
+                    <div class="volunteer-header">
+                        <div class="icon-wrapper">
+                            <span class="volunteer-icon">🤝</span>
+                        </div>
+                        <h2>Join the Healthcare Excellence Program 🩺</h2>
+                    </div>
+
+                    <div class="volunteer-body">
+                        <p class="lead-text">Thank you for your interest in contributing to our Healthcare Excellence
+                            Program!</p>
+
+                        <p>We’re planning upcoming sessions and would love your involvement. Whether you’d like to share
+                            insights on healthcare standards, demonstrate a tool, present a use case, or lead a
+                            discussion — your contribution is highly valued.</p>
+
+                        <p class="highlight-text">You don’t need to be a subject matter expert; just bring your
+                            curiosity and willingness to help the team explore, learn, and grow together.</p>
+
+                        <p>Please provide a few quick details below to help us plan and organize future sessions
+                            effectively.</p>
+                    </div>
+
+                    <div class="volunteer-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1ItN3MEtd85rFhroi6e7J82KN8-F8P9yWOyCadzYoDcH5Dg/viewform?usp=dialog"
+                            target="_blank" class="btn-primary">
+                            <span>Fill Interest Form</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="volunteer-decoration">
+                    <div class="blob blob-1"></div>
+                    <div class="blob blob-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

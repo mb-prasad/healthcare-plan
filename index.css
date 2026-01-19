@@ -170,9 +170,47 @@ h6 {
 /* Main Container */
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
+    /* Increased max-width for side-by-side layout */
     margin: 0 auto;
-    padding: 4rem 0 8rem;
+    padding: 0;
+}
+
+/* Section Backgrounds */
+.section-bg-session,
+.section-bg-certificate {
+    width: 100%;
+    padding: 6rem 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.section-bg-session::before,
+.section-bg-certificate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(248, 250, 252, 0.4);
+    z-index: 0;
+}
+
+.section-bg-session>.container,
+.section-bg-certificate>.container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-bg-session {
+    background-image: url('./session_bg.png');
+}
+
+.section-bg-certificate {
+    background-image: url('./certificate_bg.png');
 }
 
 /* Page Titles */
@@ -182,15 +220,35 @@ h6 {
     position: relative;
 }
 
-.page-title h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 1rem;
-    display: inline-block;
+.sessions-layout .page-title {
+    text-align: left;
+    margin-bottom: 0;
+    position: sticky;
+    top: 140px;
+    /* Adjusted sticky positioning */
+    align-self: start;
+    padding-right: 2rem;
+    /* Add breathing room */
+}
+
+.sessions-layout .page-title h2 {
+    display: block;
+    font-size: 4rem;
+    /* Massive, impactful typography */
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Decorative accent line under the left title */
+.sessions-layout .page-title h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 6px;
+    background: var(--accent);
+    margin-top: 1rem;
+    border-radius: 4px;
 }
 
 .section-subtitle {
@@ -198,30 +256,75 @@ h6 {
     color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.8;
+}
+
+.sessions-layout .section-subtitle {
+    margin: 0;
+    max-width: 90%;
+    font-size: 1.2rem;
+    /* Slightly larger for readability */
+    color: var(--secondary-light);
 }
 
 /* Timeline / Sessions */
+.sessions-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* 1/3 for title, 2/3 for content */
+    gap: 4rem;
+    align-items: start;
+}
+
 .timeline {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
+    /* Slightly reduced gap */
     position: relative;
+    width: 100%;
 }
 
 .timeline::before {
     /* Vertical line connecting cards */
     content: '';
     position: absolute;
-    top: 50px;
-    bottom: 0;
-    left: 60px;
-    /* Aligned with icon center roughly */
+    top: 2rem;
+    bottom: 2rem;
+    left: -30px;
+    /* Positioned outside the cards on the left */
     width: 2px;
-    background: linear-gradient(180deg, var(--primary) 0%, transparent 100%);
-    opacity: 0.2;
+    background: linear-gradient(180deg, rgba(var(--primary-hue), 85%, 35%, 0.1) 0%, var(--primary) 50%, rgba(var(--primary-hue), 85%, 35%, 0.1) 100%);
     z-index: 0;
-    display: none;
-    /* Hidden by default, enable if we want a connected timeline look */
+    display: block;
+}
+
+/* Timeline Node Dot */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    /* Center vertically relative to card height? No, roughly top aligned usually looks better. Let's do fixed top offset */
+    top: 100px;
+    /* Aligned with icon area roughly */
+    left: -36px;
+    /* -30px (line) - 6px (half width) */
+    width: 14px;
+    height: 14px;
+    background: var(--bg-surface);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    box-shadow: 0 0 0 4px var(--bg-body);
+    /* Fake spacing */
+    transition: var(--transition-base);
+}
+
+.card:hover::after {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-50%) scale(1.2);
 }
 
 /* Course Card */
@@ -393,13 +496,12 @@ h6 {
 
 /* Certificates Section */
 .certificates-section {
-    background: white;
-    /* Clean break */
-    border-radius: var(--radius-xl);
-    padding: 5rem 3rem;
-    margin-top: 6rem;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border-light);
+    background: transparent;
+    border-radius: 0;
+    padding: 6rem 0;
+    margin-top: 0;
+    box-shadow: none;
+    border: none;
 }
 
 .certificates-grid {
@@ -581,6 +683,36 @@ h6 {
 
     .header-content {
         justify-content: center;
+    }
+
+    .sessions-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .sessions-layout .page-title {
+        text-align: center;
+        position: static;
+        margin-bottom: 2rem;
+    }
+
+    .sessions-layout .page-title h2 {
+        font-size: 2.5rem;
+    }
+
+    .sessions-layout .page-title h2::after {
+        margin: 1rem auto;
+        /* Center accent line on mobile */
+    }
+
+    .timeline::before {
+        display: none;
+        /* Hide timeline line on mobile */
+    }
+
+    .card::after {
+        display: none;
+        /* Hide timeline dots on mobile */
     }
 }
 
